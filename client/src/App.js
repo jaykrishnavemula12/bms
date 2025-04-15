@@ -11,6 +11,8 @@ import Admin from "./pages/Admin";
 import Partner from "./pages/Partner";
 import SingleMovie from "./pages/home/singleMovie";
 import BookShow from "./pages/home/BookShow";
+import Forget from "./pages/Profile/ForgetPassword";
+import Reset from "./pages/Profile/ResetPassword";
 
 export const App = () => {
   return (
@@ -61,6 +63,8 @@ export const App = () => {
                 </ProtectedRoute>
               }
             />
+            <Route path="/forget" element={<Forget />} />
+            <Route path="/reset/:email" element={<Reset />} />
           </Routes>
         </BrowserRouter>
       </Provider>

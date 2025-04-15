@@ -11,7 +11,7 @@ export const Login = () => {
       const response = await LoginUser(values);
       if (response.success) {
         message.success(response.message);
-        localStorage.setItem("token", response.data)
+        localStorage.setItem("token", response.data);
         navigate("/");
       } else {
         message.error(response.message);
@@ -61,6 +61,9 @@ export const Login = () => {
           <div>
             <p>
               New User? <Link to="/register">Register Here</Link>
+            </p>
+            <p>
+              Forgot Password? <Link to="/forget">Click Here</Link>
             </p>
           </div>
         </section>
